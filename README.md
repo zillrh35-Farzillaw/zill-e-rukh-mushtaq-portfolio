@@ -18,7 +18,8 @@ gallery/                 Achievements gallery
   logos/                    Institutional / accreditation logos
   reviews/                  Reviewer avatar photos
   g*.jpg                    Event and engagement photos
-netlify.toml            Netlify deploy configuration
+CNAME                   Custom domain for GitHub Pages
+.nojekyll                Disables Jekyll processing on GitHub Pages
 ```
 
 ## Local preview
@@ -33,4 +34,13 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-This repo is connected to Netlify for continuous deployment — pushes to `main` publish automatically. `netlify.toml` sets the publish directory (`.`) and caching headers for `assets/` and `gallery/`.
+Served via GitHub Pages, deploying from the `main` branch root on every push. `CNAME` maps the custom domain (`www.zillerukhmushtaq.website`); `.nojekyll` tells Pages to serve the files as-is instead of running them through Jekyll.
+
+One-time setup in the GitHub UI (Settings → Pages):
+- Source: **Deploy from a branch** → Branch: `main` → Folder: `/ (root)`
+- Custom domain: `www.zillerukhmushtaq.website` (matches the `CNAME` file)
+- Enforce HTTPS: on, once GitHub finishes issuing the certificate
+
+DNS records needed at your domain registrar:
+- `CNAME` record: `www` → `zillrh35-farzillaw.github.io`
+- `A` records for the apex domain (`zillerukhmushtaq.website`), pointing to GitHub Pages' IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
