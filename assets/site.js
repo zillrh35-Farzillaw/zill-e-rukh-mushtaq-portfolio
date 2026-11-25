@@ -19,7 +19,7 @@
     burger.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
     nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1180) setMenu(false); });
   }
 
   // reveal on scroll
