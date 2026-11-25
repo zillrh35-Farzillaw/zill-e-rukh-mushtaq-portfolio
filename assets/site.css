@@ -630,3 +630,14 @@ section[id]{scroll-margin-top:84px}
 @media(max-width:640px){.jgrid{--h:120px;gap:8px}.jgrid.short{--h:110px}.jgrid figcaption b{font-size:.7rem}.jgrid figcaption small{display:none}}
 .jgrid.short::after{display:none}
 @media(max-width:640px){.jgrid:not(.short) figcaption{display:none}.jgrid.short{--h:140px}}
+
+/* ---------- real photographs behind the three practice tiles ---------- */
+.tile::after{inset:0;right:0;bottom:0;width:auto;height:auto;opacity:.3;background-size:cover;background-repeat:no-repeat;mix-blend-mode:luminosity;filter:grayscale(1) contrast(1.15);transform:none}
+.tile:nth-child(1)::after{background-image:url(/assets/art/photo-scales.jpg);background-position:80% 60%}
+.tile:nth-child(2)::after{background-image:url(/assets/art/photo-gavel.jpg);background-position:center 55%}
+.tile:nth-child(3)::after{background-image:url(/assets/art/photo-books.jpg);background-position:center center}
+.tile::before{z-index:-1}
+.tile{background-blend-mode:normal}
+.tile > *{position:relative;z-index:1}
+.tile:hover::after{opacity:.38;transform:scale(1.02)}
+@media(max-width:640px){.tile::after{width:auto;height:auto;right:0;bottom:0;opacity:.28}}
