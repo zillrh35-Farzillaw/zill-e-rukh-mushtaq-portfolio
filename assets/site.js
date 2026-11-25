@@ -40,21 +40,6 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 
-/* consultation request -> WhatsApp */
-function sendToWhatsApp(e) {
-  e.preventDefault();
-  var g = function (id) { return (document.getElementById(id).value || '').trim(); };
-  var lines = ['Assalam-o-Alaikum, I would like to book a consultation.', '', 'Name: ' + g('bk-name'), 'Phone: ' + g('bk-phone')];
-  if (g('bk-email')) lines.push('Email: ' + g('bk-email'));
-  lines.push('Matter: ' + g('bk-matter'));
-  if (g('bk-date')) lines.push('Preferred date: ' + g('bk-date'));
-  if (g('bk-msg')) lines.push('Details: ' + g('bk-msg'));
-  lines.push('', 'Sent via your portfolio site.');
-  var ok = document.getElementById('bk-ok'); if (ok) ok.classList.add('show');
-  window.open('https://wa.me/923100043077?text=' + encodeURIComponent(lines.join('\n')), '_blank');
-  return false;
-}
-
 /* old one-page links (e.g. /#booking) -> new pages */
 (function () {
   if (location.pathname !== '/' && location.pathname !== '/index.html') return;
