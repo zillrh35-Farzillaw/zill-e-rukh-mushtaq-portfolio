@@ -499,3 +499,10 @@ body.menu-open{overflow:hidden}
 @media(max-width:1000px){.ggrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.ggrid{grid-template-columns:1fr 1fr;gap:8px}.ggrid figcaption{padding:26px 9px 8px}.ggrid figcaption b{font-size:.72rem}.ggrid figcaption small{font-size:.64rem}}
 @media(max-width:640px){.ggrid figure{aspect-ratio:4/5}.ggrid figcaption{padding:22px 8px 7px}.ggrid figcaption b{font-size:.68rem;-webkit-line-clamp:2}.ggrid figcaption small{display:none}}
+
+/* keep heads in frame: square tiles; tall photos anchored to the top */
+.ggrid figure{aspect-ratio:1/1}
+.ggrid img{object-position:center center}
+.ggrid figure.tall img,.gprev figure.tall img{object-position:center 4%}
+.gprev img{object-position:center 35%}
+@media(max-width:640px){.ggrid figure{aspect-ratio:1/1}}
