@@ -602,3 +602,17 @@ section[id]{scroll-margin-top:84px}
 @media(max-width:1000px){.pubgrid{grid-template-columns:1fr}}
 @media(max-width:560px){.pubc{grid-template-columns:1fr}.pubc-cover{flex-direction:row;align-items:baseline;gap:12px;padding:14px 18px}.pubc-journal{margin-top:0;font-size:.92rem}.pubc-year{margin-top:0;font-size:1.1rem;margin-left:auto}.pubc-cover::before{display:none}.pubc-body{padding:20px}}
 .ggrid figure,.gprev figure{min-width:0;overflow:hidden}
+
+/* practice hub */
+.hubgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hubcard{display:flex;flex-direction:column;text-decoration:none;color:#fff;background:linear-gradient(150deg,var(--blue-700),var(--navy-900));padding:44px 40px 38px;min-height:280px;position:relative;overflow:hidden;isolation:isolate;transition:transform .3s,box-shadow .3s}
+.hubcard:nth-child(2){background:linear-gradient(150deg,var(--blue),var(--navy))}
+.hubcard::after{content:"";position:absolute;z-index:-1;right:-30px;bottom:-34px;width:230px;height:230px;opacity:.13;background:url(/assets/art/scales.svg) no-repeat center/contain}
+.hubcard:nth-child(2)::after{background-image:url(/assets/art/gavel.svg)}
+.hubcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.hubcard .eyebrow{color:rgba(255,255,255,.7)}
+.hubcard h3{color:#fff;font-size:clamp(1.6rem,2.6vw,2.1rem);margin:14px 0 12px}
+.hubcard p{color:rgba(255,255,255,.85);flex:1;max-width:420px}
+.hubcard .link-arrow{margin-top:22px;color:#fff}
+@media(max-width:800px){.hubgrid{grid-template-columns:1fr}.hubcard{min-height:0;padding:34px 26px 30px}}
+.cgrid.three .ccard{flex-basis:calc(33.333% + 1px)}@media(max-width:620px){.cgrid.three .ccard{flex-basis:calc(50% + 1px)}}
