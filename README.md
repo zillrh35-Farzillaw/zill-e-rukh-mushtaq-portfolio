@@ -1,26 +1,35 @@
 # Zill E Rukh Mushtaq — Portfolio
 
-Personal portfolio site for Zill E Rukh Mushtaq — Legal Professional, Accredited Mediator (SIMI · IMI · CMC UK), Associate Arbitrator & Published Researcher.
+Personal portfolio site for Zill E Rukh Mushtaq — Accredited Mediator (IMI · CMC UK · SIMI), Associate Arbitrator & Published Researcher.
 
 Live at [zillerukhmushtaq.website](https://www.zillerukhmushtaq.website/).
 
 ## Structure
 
-Static site — no build step, no dependencies.
+Static multi-page site — plain HTML with one shared stylesheet and script, no build step or dependencies.
 
 ```
-index.html            Single-page site (markup, CSS, and JS inline)
-robots.txt             Search engine crawl rules
-sitemap.xml             Sitemap for search engines
-favicon.ico, favicon-*.png, apple-touch-icon.png    Site icons (must stay at root)
+index.html              Home
+about/                  Profile, experience, education, competencies
+practice/               Areas of practice and the mediation process
+credentials/            Accreditations, qualifications, memberships
+publications/           Published and forthcoming works
+engagements/            Speaking, adjudication, honours, conferences, delegations
+gallery/                Media gallery page (index.html) and the event photos (g*.jpg)
+  reviews/                Reviewer avatar photos
+contact/                Consultation request (opens WhatsApp) and contact details
+assets/site.css         Shared styles for every page
+assets/site.js          Shared behaviour (menu, reveals, gallery lightbox, booking form)
+assets/logos/           Institution logos in original colours
 assets/images/          Hero photo, profile photo, Open Graph image
-gallery/                 Achievements gallery
-  logos/                    Institutional / accreditation logos
-  reviews/                  Reviewer avatar photos
-  g*.jpg                    Event and engagement photos
+robots.txt, sitemap.xml Search engine files
+favicon.ico, favicon-*.png, apple-touch-icon.png    Site icons (must stay at root)
 CNAME                   Custom domain for GitHub Pages
-.nojekyll                Disables Jekyll processing on GitHub Pages
+.nojekyll               Disables Jekyll processing on GitHub Pages
 ```
+
+Every page carries the same header and footer; when editing navigation, update it on all pages.
+Old one-page links such as `/#booking` are redirected to the matching new page by `assets/site.js`.
 
 ## Local preview
 
