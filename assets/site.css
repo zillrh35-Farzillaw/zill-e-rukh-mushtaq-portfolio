@@ -506,3 +506,11 @@ body.menu-open{overflow:hidden}
 .ggrid figure.tall img,.gprev figure.tall img{object-position:center 4%}
 .gprev img{object-position:center 35%}
 @media(max-width:640px){.ggrid figure{aspect-ratio:1/1}}
+
+/* faint legal illustrations inside the practice tiles */
+.tile::after{content:"";position:absolute;z-index:-1;right:-28px;bottom:-30px;width:250px;height:250px;opacity:.15;background:no-repeat center/contain;pointer-events:none;transition:opacity .4s,transform .6s}
+.tile:nth-child(1)::after{background-image:url(/assets/art/scales.svg)}
+.tile:nth-child(2)::after{background-image:url(/assets/art/gavel.svg)}
+.tile:nth-child(3)::after{background-image:url(/assets/art/book.svg)}
+.tile:hover::after{opacity:.2;transform:scale(1.03)}
+@media(max-width:640px){.tile::after{width:190px;height:190px;right:-20px;bottom:-24px;opacity:.12}}
