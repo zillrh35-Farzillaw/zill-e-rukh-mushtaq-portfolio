@@ -144,6 +144,7 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:400;line-heigh
 .ccard{background:#fff;padding:32px 22px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
 .ccard .lg{height:64px;display:grid;place-items:center;margin-bottom:22px}
 .ccard .lg img{max-height:58px;max-width:150px;width:auto}
+.ccard .txtmark{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--navy);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 10px}
 .ccard b{font-family:var(--serif);font-weight:400;font-size:1rem;color:var(--ink);line-height:1.35}
 .ccard small{display:block;font-size:.78rem;color:var(--muted);margin-top:8px;line-height:1.5}
 @media(max-width:1000px){.cgrid{grid-template-columns:repeat(3,1fr)}}
