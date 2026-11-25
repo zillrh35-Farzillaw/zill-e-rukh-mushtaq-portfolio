@@ -55,3 +55,18 @@
     memberships: '/credentials/#memberships', competencies: '/about/#expertise', booking: '/contact/', contact: '/contact/' };
   var h = location.hash.replace('#', ''); if (map[h]) location.replace(map[h]);
 })();
+
+/* session video: load YouTube only when the visitor presses play */
+(function () {
+  document.querySelectorAll('.video[data-yt]').forEach(function (v) {
+    var b = v.querySelector('button'); if (!b) return;
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + v.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = 'Dispute Resolution 2.0 — Day 01';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen = true; f.referrerPolicy = 'strict-origin-when-cross-origin';
+      v.innerHTML = ''; v.appendChild(f);
+    });
+  });
+})();
