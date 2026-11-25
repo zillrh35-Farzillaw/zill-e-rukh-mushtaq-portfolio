@@ -338,18 +338,14 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:400;line-heigh
 .lb button{position:absolute;top:18px;right:18px;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:9px 16px;font:600 .82rem var(--sans);cursor:pointer}
 
 /* ---------- contact page ---------- */
-.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(36px,6vw,72px);align-items:start}
-.form{background:#fff;border:1px solid var(--line);padding:36px 34px;box-shadow:var(--shadow)}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.field{display:flex;flex-direction:column;margin-bottom:18px}
-.field label{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
-.field input,.field select,.field textarea{font:inherit;font-size:.95rem;color:var(--ink);border:1px solid var(--line-2);background:#fff;padding:12px 14px;border-radius:2px;width:100%}
-.field textarea{min-height:120px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(46,117,182,.15)}
-.form .btn{width:100%;justify-content:center;cursor:pointer;font-family:var(--sans)}
-.form .hint{font-size:.8rem;color:var(--muted);margin-top:12px;text-align:center}
-.form .ok{display:none;margin-top:14px;padding:12px 14px;background:var(--mist);font-size:.86rem;color:var(--ink)}
-.form .ok.show{display:block}
+.mailgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mailcard{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-top:2px solid var(--navy);padding:30px 28px;transition:box-shadow .3s,border-color .3s}
+.mailcard:hover{box-shadow:var(--shadow);border-color:var(--line-2)}
+.mailcard span{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.mailcard b{font-family:var(--serif);font-weight:400;font-size:1rem;color:var(--ink);margin:14px 0 22px;overflow-wrap:break-word;flex:1}
+.mailcard em{font-style:normal;display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:600;color:var(--navy)}
+.mailcard em svg{width:15px;height:15px}
+@media(max-width:900px){.mailgrid{grid-template-columns:1fr}}
 .cinfo h3{font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
 .cinfo a{display:block;text-decoration:none;color:var(--ink);font-size:.95rem;padding:12px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
 .cinfo a span{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}

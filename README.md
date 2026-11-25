@@ -17,9 +17,9 @@ publications/           Published and forthcoming works
 engagements/            Speaking, adjudication, honours, conferences, delegations
 gallery/                Media gallery page (index.html) and the event photos (g*.jpg)
   reviews/                Reviewer avatar photos
-contact/                Consultation request (opens WhatsApp) and contact details
+contact/                Contact by email (no phone number or booking form, by request)
 assets/site.css         Shared styles for every page
-assets/site.js          Shared behaviour (menu, reveals, gallery lightbox, booking form)
+assets/site.js          Shared behaviour (menu, reveals, gallery lightbox, contact links)
 assets/logos/           Institution logos in original colours
 assets/images/          Hero photo, profile photo, Open Graph image
 robots.txt, sitemap.xml Search engine files
