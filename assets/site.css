@@ -616,3 +616,17 @@ section[id]{scroll-margin-top:84px}
 .hubcard .link-arrow{margin-top:22px;color:#fff}
 @media(max-width:800px){.hubgrid{grid-template-columns:1fr}.hubcard{min-height:0;padding:34px 26px 30px}}
 .cgrid.three .ccard{flex-basis:calc(33.333% + 1px)}@media(max-width:620px){.cgrid.three .ccard{flex-basis:calc(50% + 1px)}}
+
+/* ---------- gallery: justified rows, every photo whole at its natural shape ---------- */
+.jgrid{display:flex;flex-wrap:wrap;gap:14px;--h:230px}
+.jgrid.short{--h:210px}
+.jgrid::after{content:"";flex-grow:1000000}
+.jgrid figure{flex-grow:calc(var(--ar) * 100);flex-basis:calc(var(--ar) * var(--h));min-width:0;display:flex;flex-direction:column;cursor:zoom-in}
+.jgrid img{width:100%;aspect-ratio:var(--ar);height:auto;object-fit:cover;background:var(--mist)}
+.jgrid figcaption{padding:9px 2px 4px}
+.jgrid figcaption b{display:block;font-size:.84rem;font-weight:600;color:var(--ink);line-height:1.35}
+.jgrid figcaption small{display:block;font-size:.74rem;color:var(--muted);margin-top:2px}
+.jgrid figure:hover img{opacity:.92}
+@media(max-width:640px){.jgrid{--h:120px;gap:8px}.jgrid.short{--h:110px}.jgrid figcaption b{font-size:.7rem}.jgrid figcaption small{display:none}}
+.jgrid.short::after{display:none}
+@media(max-width:640px){.jgrid:not(.short) figcaption{display:none}.jgrid.short{--h:140px}}
