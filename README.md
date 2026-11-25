@@ -53,3 +53,5 @@ One-time setup in the GitHub UI (Settings → Pages):
 DNS records needed at your domain registrar:
 - `CNAME` record: `www` → `zillrh35-farzillaw.github.io`
 - `A` records for the apex domain (`zillerukhmushtaq.website`), pointing to GitHub Pages' IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+
+Last published: 25 November 2026.
