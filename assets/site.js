@@ -9,11 +9,18 @@
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   // mobile menu
-  if (burger) burger.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
+  var setMenu = function (open) {
+    nav.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+  };
+  if (burger) {
+    burger.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+    nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
+  }
 
   // reveal on scroll
   var els = document.querySelectorAll('.rv');

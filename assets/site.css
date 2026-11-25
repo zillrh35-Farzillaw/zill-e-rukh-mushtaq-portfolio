@@ -45,8 +45,7 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:400;line-heigh
 .site-header.scrolled{box-shadow:0 6px 24px rgba(12,35,64,.08)}
 .hdr{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);flex-shrink:0}
-.mono{width:42px;height:42px;border:1px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:.82rem;letter-spacing:.06em;color:var(--navy);position:relative}
-.mono::after{content:"";position:absolute;inset:3px;border:1px solid var(--gold-soft);border-radius:50%}
+.mark{width:42px;height:42px;color:var(--gold);flex-shrink:0}
 .brand-txt b{display:block;font-family:var(--serif);font-weight:400;font-size:1.02rem;letter-spacing:.01em;line-height:1.2}
 .brand-txt small{display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
 .nav{display:flex;align-items:center;gap:26px}
@@ -214,7 +213,7 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:400;line-heigh
 /* footer */
 .site-footer{background:#06162a;color:rgba(255,255,255,.66);padding:64px 0 28px;font-size:.88rem}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
-.site-footer .brand{color:#fff}.site-footer .mono{border-color:rgba(255,255,255,.7);color:#fff}
+.site-footer .brand{color:#fff}.site-footer .mark{color:var(--gold-soft)}
 .site-footer .brand-txt small{color:rgba(255,255,255,.5)}
 .site-footer p{margin-top:18px;max-width:300px}
 .site-footer h4{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:16px}
@@ -357,3 +356,68 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:400;line-heigh
 @media(max-width:560px){.frow{grid-template-columns:1fr}.form{padding:28px 20px}}
 .cinfo .box a.btn{display:inline-flex;color:#fff;border:1px solid rgba(255,255,255,.85);padding:12px 20px;font-size:.86rem;margin-top:16px}
 .cinfo .box a.btn:hover{background:#fff;color:var(--navy-900)}
+
+/* ---------- phone refinements ---------- */
+.burger .i-close{display:none}
+.burger[aria-expanded="true"] .i-open{display:none}
+.burger[aria-expanded="true"] .i-close{display:block}
+body.menu-open{overflow:hidden}
+@media(max-width:1080px){
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
+  .nav{z-index:60;box-shadow:0 12px 24px rgba(12,35,64,.08)}
+}
+@media(max-width:640px){
+  .hdr{height:66px}
+  .nav{inset:66px 0 0 0}
+  .mark{width:36px;height:36px}
+  .brand{gap:10px}
+  .brand-txt b{font-size:.95rem}
+  .brand-txt small{font-size:.58rem;letter-spacing:.14em}
+  .sec{padding:60px 0}
+  .sec-head{margin-bottom:32px}
+  .h-sec{font-size:1.7rem}
+  .lede{font-size:.98rem}
+  .hero-photo{aspect-ratio:auto;height:58vh;min-height:340px;max-height:520px}
+  .hero-photo img{object-position:center 22%}
+  .hero-copy{padding:4px var(--gutter) 52px}
+  .hero h1{font-size:2.5rem;margin:12px 0 20px}
+  .titles{padding-left:16px;gap:6px}
+  .titles li{font-size:.92rem}
+  .hero p.intro{font-size:.95rem;margin-top:20px}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-actions .btn{justify-content:center}
+  .strip div.it{padding:18px 12px 18px 0}
+  .strip div.it:nth-child(even){padding-left:12px}
+  .strip b{font-size:1rem}
+  .strip span{font-size:.76rem}
+  .tile{padding:40px 24px 34px}
+  .statement h2{font-size:1.9rem}
+  .st-photo img{aspect-ratio:4/3.2}
+  .logo-card{width:156px;height:88px;padding:14px 18px}
+  .logo-card img{max-height:48px}
+  .mrow{gap:12px}
+  .marquee + .marquee{margin-top:12px}
+  .ccard .lg{height:52px;margin-bottom:16px}
+  .ccard .lg img{max-height:46px;max-width:118px}
+  .ccard b{font-size:.92rem}
+  .pcard{padding:26px 20px}
+  .pcard h3{font-size:1.12rem}
+  .ecard .tx{padding:20px}
+  .ecard.navy{padding:32px 24px}
+  .rcard{width:280px;padding:24px 20px}
+  .gprev{grid-auto-rows:150px;gap:8px}
+  .gprev figcaption{font-size:.72rem;padding:20px 10px 8px}
+  .cta-lines a{font-size:.88rem;overflow-wrap:anywhere}
+  .page-head h1{font-size:2.3rem}
+  .page-head p{font-size:.96rem}
+  .masonry{columns:2;column-gap:10px}
+  .masonry figure{margin-bottom:10px}
+  .masonry figcaption{padding:10px 10px 12px}
+  .masonry figcaption b{font-size:.8rem}
+  .masonry figcaption small{font-size:.72rem}
+  .elist div{padding:18px 0}
+  .prcard{padding:30px 22px}
+  .tl article{padding:0 0 32px 26px}
+  .mailcard{padding:24px 20px}
+  .fgrid{gap:30px}
+}
